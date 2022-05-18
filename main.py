@@ -16,11 +16,11 @@ qr_url = st.text_input('文字列またはURLを入力して、QRコードを生
 
 col1, col2 = st.columns(2)
 with col1:
-    qr_version = st.slider('Version (1-10)', 1, 10, value=5)
+    qr_version = st.slider('バージョン (1-10)', 1, 10, value=5)
     qr_correction = st.select_slider(
-                        "Error Correction Grade: [L, M, Q, H]",
+                        "エラー訂正グレード: [L, M, Q, H]",
                         options=['L', 'M', 'Q', 'H'], value='H')
-    qr_scale = st.slider('Scale (4-8 pixels/cell)', 2, 8, value=4)
+    qr_scale = st.slider('スケール (4-8 pixels/cell)', 2, 8, value=4)
     st.text(f'Length: {len(qr_url)}')
     st.text(f'QR Code Version: {qr_version}')
     st.text(f'Error Correction Grade: {qr_correction}')
