@@ -12,7 +12,7 @@ BACKGROUND_COLOR = (250, 250, 250, 255)
 st.title('QR Code カニ')
 st.subheader('文字列やURLからQRコードを生成することができます。')
 st.text('PyQRCodeNGバージョン')
-qr_url = st.text_input('Enter a string or URL to generate a QR code:', value='https://code2create.club/')
+qr_url = st.text_input('文字列またはURLを入力して、QRコードを生成します。:', value='https://code2create.club/')
 
 col1, col2 = st.columns(2)
 with col1:
