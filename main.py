@@ -21,10 +21,10 @@ with col1:
                         "エラー訂正グレード: [L, M, Q, H]",
                         options=['L', 'M', 'Q', 'H'], value='H')
     qr_scale = st.slider('スケール (4-8 pixels/cell)', 2, 8, value=4)
-    st.text(f'Length: {len(qr_url)}')
-    st.text(f'QR Code Version: {qr_version}')
-    st.text(f'Error Correction Grade: {qr_correction}')
-    st.text(f'Mode: Scale: {qr_scale}')
+    st.text(f'長さ: {len(qr_url)}')
+    st.text(f'QRコード版: {qr_version}')
+    st.text(f'エラー訂正グレード: {qr_correction}')
+    st.text(f'モード スケール: {qr_scale}')
 
 try:
     qr = pyqrcode.create(qr_url, error=qr_correction, version=qr_version, mode='binary')
